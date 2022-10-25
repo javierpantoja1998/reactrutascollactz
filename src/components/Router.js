@@ -5,8 +5,10 @@ import MenuRutas from './MenuRutas';
 
 export default class Router extends Component {
   render() {
+    //Creanis el metodo para el elemento Collatz
     function CollatzElement() {
-        var {numero} = useParams;
+      //Recogemos la variable
+        var {numero} = useParams();
         return <Collatz numeroCollatz={numero}/>
     }
 
