@@ -42,6 +42,7 @@ export default class Collatz extends Component {
     componentDidUpdate = (oldProp) => {
         //Comprobamos que el nuevo numero es distinto del antiguo
         //Comparamos el prop nuevo con el antiguo
+        //Gracias  a esto se rompe el bucle infinito
         if(this.props.numeroCollatz !== oldProp.numeroCollatz){
             this.generarCollatz();
         }
@@ -54,8 +55,10 @@ export default class Collatz extends Component {
         <h1>{this.props.numeroCollatz}</h1>
         <ul>
             {
+                //Hacemos un mapeo para recorrer el array y dibujarlo
                 this.state.arrayCollatz.map((valor,index)=>{
-                    
+                    //  QUE NO SE OLVIDE EL RETURN!
+                    //Devolvemos los valores en forma de lista
                     return (<li key={index}>{valor}</li>)
                 })
             }
