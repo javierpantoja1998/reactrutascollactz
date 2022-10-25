@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MenuRutas from './components/MenuRutas';
+import Router from './components/Router';
+import Collatz from './components/Collatz';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router/>
   </React.StrictMode>
 );
 
